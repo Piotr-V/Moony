@@ -1,0 +1,951 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
+/* General Blueprint Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesomed41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+html, body, 
+.container,
+.cbp-fbscroller,
+.cbp-fbscroller section { 
+	height: 100%;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  	  background: transparent url(images/bg.jpg) no-repeat;
+}
+
+
+@-webkit-keyframes fadeinout {
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes fadeinout {
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+@-o-keyframes fadeinout {
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+@keyframes fadeinout {
+  0%   { opacity: 0; }
+  50%   { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+a.hide {
+	visibility : hidden;
+}
+
+img {
+    max-width: 80%;
+}
+img.rs {
+	margin-right : 20px;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.container > header {
+	padding: 2.875em 1.875em 1.875em;
+	position: absolute;
+	z-index: 1000;
+	  top: 30%;
+  width: 850px;
+  height: 300px;
+  left: 40%;
+  margin-top: -150px;
+  margin-left: -300px;
+  text-align: center;
+}
+
+.container > header h1 {
+	font-size: 3.6em;
+	line-height: 1.3;
+	margin-top: 20px;
+	font-weight: 600;
+	color: #fff;
+	font-family: 'Open Sans', cursive;
+}
+
+.container > header h2 {
+	font-size: 2.2em;
+	line-height: 1.3;
+	margin-top: 20px;
+	font-weight: 600;
+	font-family: 'Open Sans', cursive;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.container > header span {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	padding: 0 0 0.6em 0.1em;
+}
+
+.container > header nav {
+	float: right;
+}
+
+.container > header nav a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 2.5em;
+	height: 2.5em;
+	background: #fff;
+	border-radius: 50%;
+	color: transparent;
+	margin: 0 0.1em;
+	border: 4px solid #fff;
+	
+}
+
+.container > header nav a:after {
+	content: attr(data-info);
+	color: #fff;
+	position: absolute;
+	width: 600%;
+	top: 120%;
+	text-align: right;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.container > header nav a:hover:after {
+	opacity: 1;
+}
+
+.container > header nav a:hover {
+	background: #47a3da;
+}
+
+/* The nav is fixed on the right side  and we center it by translating it 50% 
+(we don't know it's height so we can't use the negative margin trick) */
+.cbp-fbscroller > nav {
+	position: fixed;
+	z-index: 9999;
+	right: 50px;
+	top: 50%;
+	width: 14px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.cbp-fbscroller > nav a {
+	display: block;
+	position: relative;
+	z-index: 9999;
+	color: transparent;
+	width: 32px;
+	height: 32px;
+	outline: none;
+	margin: 18px 0;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	transition:0.2s all linear;
+}
+
+.no-touch .cbp-fbscroller > nav a:hover {
+	background: #312926);
+	transition:0.2s all linear;
+}
+
+.cbp-fbscroller > nav a.cbp-fbcurrent {
+	background: #be1742;
+}
+
+/* background-attachment does the trick */
+.cbp-fbscroller section {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.no-touch .cbp-fbscroller section {
+	background-attachment: fixed;
+}
+
+#fbsection1 {
+	  background: url(../images/bg.jpg) transparent no-repeat;
+}
+
+
+#concept{
+	background: url(../images/concept.jpg) #f9f9f9;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#histoire{
+	background: url(../images/histoire.jpg) #f9f9f9;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+.hover {
+	background: #000;
+	background-position: 35% 50%!important;
+	transition: 0.2s ease-in-out;
+
+}
+
+.info {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+ #bordeaux, #biarritz, #livraison , #contact, #actualites {
+	background : #000 !important;
+}
+/*
+#actualites {
+	background: url(../images/actu.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}*/
+
+#hamburgers {
+	background: url(../images/hamburgers.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#special {
+	background: url(../images/concept.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#bagels {
+	background: url(../images/bagels.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#wraps {
+	background: url(../images/wraps.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#tradition {
+	background: url(../images/tradition.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#salades {
+	background: url(../images/salades.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#starters {
+	background: url(../images/starters.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#desserts {
+	background: url(../images/desserts.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#boissons {
+	background: url(../images/boissons.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+#classic {
+	background: url(../images/actu.jpg) transparent;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: static;
+	transition: 1s ease-in-out;
+}
+
+.icon-drop:before, 
+.icon-arrow-left:before {
+	font-family: 'fontawesome';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #47a3da;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+	padding-left: 8px;
+}
+
+.container > header nav a:hover:before {
+	color: #fff;
+}
+
+.icon-drop:before {
+	content: "\e000";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}
+
+section .info {
+	width: 50%;
+	float: right;
+	padding: 80px;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+}
+
+section .info .text {
+	position: absolute;
+	top: 50%;
+    -webkit-transform:translateY(-50%) translatez(0);
+    -moz-transform:translateY(-50%) translatez(0);
+    -ms-transform:translateY(-50%) translatez(0);
+    -o-transform:translateY(-50%) translatez(0);
+    transform:translateY(-50%) translatez(0);
+	width : 80%;
+}
+
+section .info h1{
+	font-size: 3.725em;
+	line-height: 1.2;
+	margin: 0;
+	font-weight: bold;
+	font-family: "Open Sans",sans-serif;
+}
+
+section .info h2{
+	font-size: 1.025em;
+	line-height: 1.2;
+	color: #be1742;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 400;
+	font-family: "Open Sans",sans-serif;
+}
+
+section .info p{
+	font-size: 1.4em;
+	line-height: 1.2;
+	margin: 0;
+	font-weight: 400;
+	font-family: "Raleway", sans-serif;
+	float: left;
+	width: 90%;
+}
+
+section .info p.menu{
+	font-size: 1em;
+	line-height: 1.2;
+	margin: 0;
+	font-weight: 400;
+	font-family: "Raleway",sans-serif;
+	float: left;
+	width: 90%;
+}
+
+section .info p.menu span{
+	display : inline-block;
+	background-color : #000;
+	color : #fff;
+	padding : 2px;
+	margin-top : 3px;
+}
+
+hr{
+	width: 80px;
+	float: left;
+	border: none;
+    height: 1px;
+    margin: 1.6em 0;
+    /* Set the hr color */
+    color: #fff; /* old IE */
+    background-color: #fff; /* Modern Browsers */
+}
+
+.left {
+	width: 50%;
+	float: left;
+	height: 100%;
+	min-height: 100%;
+}
+
+.carte {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow : hidden;
+}
+
+.left .deliv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 80px;
+	vertical-align: center;
+}
+
+.deliv #deliveroo {
+	padding: 10px;
+	max-width : 100%;
+}
+
+.deliv #foodora {
+	padding: 10px;
+	max-width: 100%;
+}
+
+#flexclassic {
+	display: flex;
+	flex-direction: row;
+}
+
+.listeclassic {
+	margin: 10px;
+	padding: 10px;
+}
+
+#likebox-wrapper {
+	width : 100% !important;
+	padding : 50px;
+}
+
+section .footer h1{
+	font-size: 2.725em;
+	line-height: 1.6;
+	margin: 0;
+	font-weight: 400;
+	font-family: "Raleway",sans-serif;
+	color: #182327;
+}
+
+section .footer a{
+	color: #cdc8b6;
+	transition: 0.4s all linear;
+}
+
+section .footer a:hover{
+	color: #182327;
+	transition: 0.4s all linear;
+}
+
+section .footer{
+	text-align: center;
+	top: 50%;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -250px;
+  	font-family: "ff-tisa-web-pro";
+  	font-size: 1.2em;
+  position: absolute;
+  color: #b8b8b8;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+section .footer .button{
+	float: none;
+	margin: 2em auto;
+	font-size: 0.8em;
+	background: #cdc8b6;
+	color: #FFF;
+}
+
+/* Wapasha */
+section .footer .button.button--wapasha {
+	background: #cdc8b6;
+	color: #fff;
+}
+section .footer .button--wapasha.button--inverted {
+	background: #cdc8b6;
+	color: #FFF;
+}
+section .footer .button--wapasha::before {
+	border: 1px solid #cdc8b6;
+}
+section .footer .button--wapasha.button--inverted::before {
+	border-color: #cdc8b6;
+}
+section .footer .button--wapasha:hover {
+	background: none;
+	color: #cdc8b6;
+}
+section .footer .button--wapasha.button--inverted:hover {
+	background: none;
+	color: #cdc8b6;
+}
+
+.button {
+	float: left;
+	font-family: 'Open Sans', cursive;
+	font-size: 0.9em;
+	letter-spacing: 3px;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	padding: 0.8em 1.8em;
+	border: none;
+	clear: both;
+	margin: 1.8em 0;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	border-radius: 50%;
+	z-index: 1;
+	text-transform: uppercase;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+button.right {
+	clear : none !important;
+	margin-left : 20px;
+}
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+
+
+/* Sizes */
+.button--size-s {
+	font-size: 14px;
+}
+.button--size-m {
+	font-size: 16px;
+}
+.button--size-l {
+	font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.button--text-thin {
+	font-weight: 300;
+}
+.button--text-medium {
+	font-weight: 500;
+}
+.button--text-thick {
+	font-weight: 600;
+}
+.button--round-s {
+	border-radius: 5px;
+}
+.button--round-m {
+	border-radius: 15px;
+}
+.button--round-l {
+	border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid;
+}
+.button--border-medium {
+	border: 2px solid;
+}
+.button--border-thick {
+	border: 3px solid;
+}
+
+/* Wapasha */
+.button.button--wapasha {
+	background: #37474f;
+	color: #fff;
+	-webkit-transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
+}
+.button--wapasha.button--inverted {
+	background: #fff;
+	color: #676767;
+}
+.button--wapasha::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #3f51b5;
+	z-index: -1;
+	border-radius: inherit;
+	opacity: 0;
+	-webkit-transform: scale3d(0.6, 0.6, 1);
+	transform: scale3d(0.6, 0.6, 1);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--wapasha.button--inverted::before {
+	border-color: #FFF;
+}
+.button--wapasha:hover {
+	background: none;
+	color: #3f51b5;
+	cursor: pointer; cursor: hand;
+}
+.button--wapasha.button--inverted:hover {
+	background: none;
+	color: #FFF;
+}
+.button--wapasha:hover::before {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	opacity: 1;
+}
+
+.drawer-hamburger-icon, .drawer-hamburger-icon:after, .drawer-hamburger-icon:before {
+	height : 4px !important;
+    background-color: #be1742 !important;
+	
+}
+.drawer--top .drawer-hamburger, .drawer--top.drawer-open .drawer-hamburger {
+    right: 25px !important;
+}
+
+ul.drawer-m0nu {
+width: 100% ;
+}
+
+ul.drawer-menu li {
+display:block;
+width : 33%;
+height : 70px;
+float:left;
+text-align: center;
+}
+
+ul.drawer-menu li[float="left"] + li {
+float:none;
+}
+
+a.drawer-brand {
+	color: #be1742 !important;
+}
+
+a.drawer-brand:hover {
+	color: #000 !important;
+}
+
+.drawer-hamburger {
+	width : 4rem !important;
+	padding: 10px .3rem 30px !important;
+}
+
+#CDSWIDPER {
+    font: normal 12px Arial,Verdana,"Bitstream Vera Sans",Helvetica,sans-serif;
+    background-color : transparent !important;
+    border : 1px solid #fff;
+margin-top : 20px !important;
+}
+
+#CDSWIDPER.widPER .widPERLINK a {
+    color: #FFF !important;
+    text-decoration: none !important;
+    }   
+
+.plugin {
+	margin-top : 20px;
+}
+
+.scrollup {
+	width: 64px;
+	height: 64px;
+	position: fixed;
+	bottom: 50px;
+	right: 25px;
+	display: none;
+}
+ 
+.scrollup:hover {
+	color: white;
+}
+
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+
+	.wow {
+  visibility: visible !important;
+  -webkit-animation: none !important;
+     -moz-animation: none !important;
+       -o-animation: none !important;
+      -ms-animation: none !important;
+          animation: none !important;
+}
+
+.fbo{
+	padding: 0; 
+}
+}
+
+@media only screen and (max-width: 1460px) {
+    /* phones */
+
+section .info h1{
+	font-size: 3.0em;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+  section {
+  	position: relative;
+	  background-size : 20%;
+  	background-attachment: scroll!important;
+  	background-position: center !important;
+  }
+
+#fbsection1 , #actualites ,#concept , #histoire, #bordeaux, #biarritz, #livraison {
+	background : #000 !important;
+}
+
+	.wow {
+  visibility: visible !important;
+  -webkit-animation: none !important;
+     -moz-animation: none !important;
+       -o-animation: none !important;
+      -ms-animation: none !important;
+          animation: none !important;
+}
+
+hr {
+	display : none;
+}
+
+nav.cbp {
+	display: none !important;
+}
+
+a.hide {
+	visibility: visible;
+	color : #be1742;
+}
+
+a.hide:hover{
+	color : #fff;
+}
+
+.fbo{
+	display : none;
+}
+
+#carte {
+	display : none;
+}
+
+left .deliv {
+    padding: 0;
+
+}
+
+.left{
+	background : #000;
+	width : 100%;
+}
+
+ section .info {
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	bottom: 0px;
+	text-align: left;
+	padding : 10px !important;
+ }
+
+button.right {
+    clear: none !important;
+    margin-left: 0;
+}
+
+.cbp-fbscroller menu, .cbp-fbscroller menu section {
+    height: 150% !important;
+}
+
+section .info h1 {
+	font-size: 1.8em;
+	line-height: 1;
+	margin: 5px 0;
+	font-weight: 400;
+	color: #fff;
+}
+
+section .info h2.menu {
+	font-size: 1em;
+	line-height: 1;
+	margin: 0;
+}
+
+section .info .text{
+margin-left : 10px;
+width: 90%;
+	margin-right : 10px;
+}
+
+section .info p{
+    font-size: 1em;
+    line-height: 1.2;
+	max-height : 100%;
+    width: 90%;
+}
+
+section .info p.menu{
+    font-size: 0.8em;
+    line-height: 1.2;
+	max-height : 100%;
+	width: 90%;
+}
+
+/*
+.button {margin: 1em 0;}*/
+
+.container > header {
+  z-index: 1000;
+  width: 100%;
+  height : 600px;
+  text-align: center;
+padding: 2.875em 1.875em 1.875em;
+top: 20%;
+left : 0;
+margin : 0;
+}
+
+
+.container > header h1 {
+	font-size: 3em;
+	line-height: 1.3;
+	margin-top: 20px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.container > header h2 {
+	font-size: 2.2em;
+	line-height: 1.3;
+	margin-top: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+section .footer {
+  text-align: center;
+  top: 50%;
+  width: 300px;
+  height: 500px;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -150px;
+  font-family: "Raleway";
+  font-size: 1.2em;
+  position: absolute;
+  color: #b8b8b8;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.container > header h1 {
+	font-size: 2.6em;
+}
+
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
